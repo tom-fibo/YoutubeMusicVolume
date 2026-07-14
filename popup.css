@@ -1,0 +1,74 @@
+body {
+  width: 260px;
+  margin: 0;
+  padding: 12px;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  color: #1a1a1a;
+}
+
+header h1 {
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+
+#empty-state {
+  color: #555;
+  line-height: 1.4;
+}
+
+#track-info {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+#track-title {
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#track-artist {
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.gains {
+  color: #333;
+}
+
+#override-section {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.scope-select label {
+  font-size: 12px;
+}
+
+#override-slider {
+  flex: 1;
+}
+
+#override-value {
+  min-width: 44px;
+  text-align: right;
+}
+
+button {
+  width: 100%;
+  padding: 6px;
+  cursor: pointer;
+}

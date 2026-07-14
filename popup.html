@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>YouTube Music Volume Leveler</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Volume Leveler</h1>
+    </header>
+
+    <section id="empty-state" hidden>
+      <p>Open <strong>music.youtube.com</strong> and play a song to use this extension.</p>
+    </section>
+
+    <main id="app" hidden>
+      <section id="track-info">
+        <div id="track-title">—</div>
+        <div id="track-artist">—</div>
+      </section>
+
+      <section class="row">
+        <label for="auto-toggle">
+          <input type="checkbox" id="auto-toggle" />
+          Auto-normalize
+        </label>
+        <select id="target-select" aria-label="Target loudness">
+          <option value="0">Quiet</option>
+          <option value="1" selected>Normal</option>
+          <option value="2">Loud</option>
+        </select>
+      </section>
+
+      <section class="row gains">
+        <span>Auto gain: <strong id="auto-gain-value">1.00x</strong></span>
+        <span>Combined: <strong id="combined-gain-value">1.00x</strong></span>
+      </section>
+
+      <section id="override-section">
+        <div class="row scope-select">
+          <label><input type="radio" name="scope" value="track" checked /> This song</label>
+          <label><input type="radio" name="scope" value="artist" /> This artist</label>
+        </div>
+        <div class="row">
+          <input type="range" id="override-slider" min="0.25" max="4" step="0.05" value="1" />
+          <span id="override-value">1.00x</span>
+        </div>
+        <button id="clear-override-btn" type="button">Clear override</button>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
